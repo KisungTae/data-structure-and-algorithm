@@ -1,0 +1,4 @@
+1. ctrl + c --> force to quit terminal
+2. ctrl + down/up arrow --> multiple curcors
+3. ctrl + d --> ctrl + alt + down arrow
+4. shift + F10 --> right click
