@@ -1,10 +1,15 @@
-1. ctrl + c --> force to quit terminal
-2. ctrl + down/up arrow --> multiple curcors
+1. force to quit terminal --> ctrl + c 
+2. multiple curcors --> ctrl + down/up arrow --> 
 3. ctrl + d --> ctrl + alt + down arrow
-4. shift + F10 --> right click
-5. ctrl + 0 --> focus editor
-
-
+4. right click --> shift + F10 
+5. focus editor --> ctrl + 0 
+6. find all occrences --> ctrl + shift + l
+7. find next occrences --> ctrl + d
+8. trigger intellisense --> ctrl + space
+9. open shorcut setup page --> ctrl + k + ctrl + s
+10. show hover --> ctrl + k + ctrl + i
+11. move between tabs --> ctrl + page down/page up
+12. duplicate a line of code --> alt + shift + down arrow
 
 
 refer to: https://blog.logrocket.com/learn-these-keyboard-shortcuts-to-become-a-vs-code-ninja/
