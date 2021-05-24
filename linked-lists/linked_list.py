@@ -3,6 +3,16 @@ class Node:
         self.data = data
         self.next = None
         self.prev = None
+    
+    def print_nodes(self):
+        iterator = self
+        data = []
+        while iterator != None:
+            data.append(str(iterator.data))
+            if (iterator.next != None):
+                data.append(" --> ")
+            iterator = iterator.next
+        print("".join(data))
 
 
 class LinkedList:
