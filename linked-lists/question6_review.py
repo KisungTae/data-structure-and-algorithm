@@ -47,4 +47,30 @@ def checkIfPalindrome():
     return True
 
 
-print("is palindrome: " + str(checkIfPalindrome()))
+def answer():
+
+    left = []
+
+    fast = palindrome.head
+    slow = palindrome.head
+
+    while fast != None and fast.next != None:
+        left.append(slow.data)
+        fast = fast.next
+        slow = slow.next
+    
+    if fast != None:
+        slow = slow.next
+    
+    while slow != None:
+        left_pop = left.pop()
+        print("left_pop: " + left_pop)
+        if left_pop != slow.data:
+            return False
+        slow = slow.next
+    
+    return True
+
+
+
+print("is palindrome: " + str(answer()))
