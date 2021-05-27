@@ -10,6 +10,6 @@
 10. show hover --> ctrl + k + ctrl + i
 11. move between tabs --> ctrl + page down/page up
 12. duplicate a line of code --> alt + shift + down arrow
-
+13. show parameter hint -->  ctrl + shift + space
 
 refer to: https://blog.logrocket.com/learn-these-keyboard-shortcuts-to-become-a-vs-code-ninja/

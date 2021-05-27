@@ -1,13 +1,19 @@
+from enum import Enum
+
 # Route Between Nodes: Given a directed graph, design an algorithm to find out whether there is a
 # route between two nodes.
 
+class State(Enum):
+    NOT_VISITED = 0
+    VISITING = 1
+    VISITED = 2
 
 class Node:
 
     def __init__(self, data):
         self.data = data
         self.children = []
-        self.visited = False
+        self.state = State.NOT_VISITED
     
 
 class Graph:
@@ -67,17 +73,27 @@ def find_route(s_data, e_data):
         return False
     else:
         queue = [start]
-
+        start.state = State.VISITING
         while len(queue) > 0:
+            
+            data = []
+            for q in queue:
+                data.append(q.data)
+            print("".join(data))
+
             curr = queue.pop(0)
             if curr.data == e_data:
                 return True
-
-            curr.visited = True
-            
+        
             for child in curr.children:
-                if not child.visited:
+                if child.data == e_data:
+                    return True
+                elif child.state == State.NOT_VISITED:
+                    child.state = State.VISITING
                     queue.append(child)
+
+            curr.state = State.VISITED
+                        
          
         return False
 
@@ -89,6 +105,6 @@ def get_node(data):
     
     return None
 
-s_data = 'b'
-e_data = 'd'
+s_data = 'a'
+e_data = 'f'
 print("is there a route between " + s_data + " and " + e_data + " : " + str(find_route(s_data, e_data)))
